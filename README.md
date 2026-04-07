@@ -1,4 +1,3 @@
-
 # Quantix
 
 Real-time crypto trading signals with 8 weighted indicators, AI-assisted confirmation, risk management, and market overview.
@@ -8,6 +7,7 @@ Real-time crypto trading signals with 8 weighted indicators, AI-assisted confirm
 **Windows:** Double-click `start.bat`
 
 **Manual:**
+
 ```bash
 # Terminal 1 — Backend (port 3001)
 cd server && npm run dev
@@ -19,6 +19,7 @@ cd client && npm run dev
 Open **http://localhost:5173**
 
 ## Features
+
 - Real-time BTC/USDT candlestick chart (TradingView Lightweight Charts)
 - 8 indicator voters: RSI, MACD, EMA 9/21/50/200, Bollinger Bands, Stochastic, Volume, Support/Resistance, Momentum
 - Signal engine: STRONG BUY / BUY / NEUTRAL / SELL / STRONG SELL with score -100 to +100
@@ -30,6 +31,7 @@ Open **http://localhost:5173**
 - Watchlist with quick symbol switching
 
 ## Stack
+
 - Frontend: React 18 + Vite + TypeScript + TailwindCSS v4
 - Backend: Node.js + Express + PostgreSQL (JWT auth, CORS proxy, in-memory cache)
 - Data: Binance WebSocket (real-time) + Binance REST + CoinGecko + alternative.me
