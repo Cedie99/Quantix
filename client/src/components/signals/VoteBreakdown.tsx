@@ -179,7 +179,7 @@ function VoteRow({ vote }: { vote: Vote }) {
   const badgeBg   = isUp ? 'rgba(22,163,74,0.1)'  : isDown ? 'rgba(220,38,38,0.1)'  : 'rgba(100,116,139,0.08)';
   const badgeBorder = isUp ? 'rgba(22,163,74,0.25)' : isDown ? 'rgba(220,38,38,0.25)' : 'rgba(100,116,139,0.2)';
   const rowBg    = isUp ? 'rgba(22,163,74,0.04)'  : isDown ? 'rgba(220,38,38,0.04)'  : 'rgba(100,116,139,0.03)';
-  const rowBorder = isUp ? 'rgba(22,163,74,0.15)' : isDown ? 'rgba(220,38,38,0.15)' : '#E2E8F0';
+  const rowBorder = isUp ? 'rgba(22,163,74,0.15)' : isDown ? 'rgba(220,38,38,0.15)' : 'rgba(125,144,190,0.28)';
 
   return (
     <div
