@@ -2,6 +2,7 @@
 # Local secrets
 .env
 **/.env
+.sfdx/
 
 
 # Local secrets
