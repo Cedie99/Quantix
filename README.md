@@ -1,7 +1,7 @@
 
-# Crypto Day Trading Analysis
+# Quantix
 
-Real-time crypto trading signals with 7 technical indicators, risk management, and market overview.
+Real-time crypto trading signals with 8 weighted indicators, AI-assisted confirmation, risk management, and market overview.
 
 ## Quick Start
 
@@ -20,16 +20,26 @@ Open **http://localhost:5173**
 
 ## Features
 - Real-time BTC/USDT candlestick chart (TradingView Lightweight Charts)
-- 7 indicators: RSI, MACD, Bollinger Bands, EMA 9/21/50/200, Stochastic, ATR, Volume SMA
+- 8 indicator voters: RSI, MACD, EMA 9/21/50/200, Bollinger Bands, Stochastic, Volume, Support/Resistance, Momentum
 - Signal engine: STRONG BUY / BUY / NEUTRAL / SELL / STRONG SELL with score -100 to +100
 - ATR-based stop-loss, 2R/3R take-profit, position sizing
 - 6 timeframes: 1m, 5m, 15m, 1h, 4h, 1d
 - Market overview: BTC dominance, Fear & Greed Index, top movers/losers
+- Optional Claude AI confirmation layer for strong signals
 - Browser notifications on STRONG BUY / STRONG SELL signal transitions
 - Watchlist with quick symbol switching
 
 ## Stack
 - Frontend: React 18 + Vite + TypeScript + TailwindCSS v4
-- Backend: Node.js + Express (CORS proxy + in-memory cache)
+- Backend: Node.js + Express + PostgreSQL (JWT auth, CORS proxy, in-memory cache)
 - Data: Binance WebSocket (real-time) + Binance REST + CoinGecko + alternative.me
-- No API keys required
+
+## Environment Variables
+
+Core app functionality (charts, signals, market data) runs without paid API keys.
+
+For AI confirmation, set:
+
+```bash
+ANTHROPIC_API_KEY=your_key_here
+```
