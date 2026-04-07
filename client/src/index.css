@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Sans', 'Courier New', monospace;
+
+  /* Bump the entire text scale up one step */
+  --text-xs: 0.8125rem;    /* 13px (was 12px) */
+  --text-sm: 0.9375rem;    /* 15px (was 14px) */
+  --text-base: 1.0625rem;  /* 17px (was 16px) */
+  --text-lg: 1.1875rem;    /* 19px (was 18px) */
+  --text-xl: 1.3125rem;    /* 21px (was 20px) */
+  --text-2xl: 1.625rem;    /* 26px (was 24px) */
+  --text-3xl: 2rem;        /* 32px (was 30px) */
+  --text-4xl: 2.375rem;    /* 38px (was 36px) */
+}
+
+@layer base {
+  :root {
+    --background: #070b1a;
+    --surface-1: #0f1630;
+    --surface-2: #131d3d;
+    --surface-3: #18244a;
+    --border-subtle: #1c2a56;
+    --border: #213363;
+    --border-emphasis: #35508f;
+    --text-primary: #e8efff;
+    --text-secondary: #b3c2e8;
+    --text-muted: #7d90be;
+    --accent-blue: #5b7bff;
+    --accent-indigo: #8b7dff;
+    --buy-color: #16a34a;
+    --sell-color: #dc2626;
+    --neutral-color: #d97706;
+  }
+
+  * {
+    border-color: var(--border);
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #070b1a;
+    color: #e8efff;
+    font-family: 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'ss02';
+    margin: 0;
+    padding: 0;
+  }
+
+  /* App layout constrains itself to viewport; landing page scrolls freely */
+  #root {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0f1630; }
+  ::-webkit-scrollbar-thumb { background: #213363; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #35508f; }
+}
+
+/* ── Landing / auth dot grid background helper ───────────────────── */
+.dot-grid-bg {
+  background-image: radial-gradient(circle, rgba(59,130,246,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Legacy alias kept for any remaining usages */
+.page-grid-bg {
+  background-image: radial-gradient(circle, rgba(59,130,246,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
